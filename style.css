@@ -39,14 +39,21 @@ header {
 }
 
 dialog {
-    background-color: var(--grayish);
+
+    position: fixed;
+    top: 50%;
+    left: 20%;
+
+    transform: translate(-50%, -50%);
+    background: var(--grayish);
     color: white;
-    border: 2px solid #BB86FC;
-    display: flex;
-    flex-direction: column;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border: none;
 }
 
-dialog button {
+button {
     background-color: #BB86FC;
     border: none;
     padding: 5px;
@@ -124,12 +131,32 @@ input{
     height: 1.8em;
 }
 
-.inputs{
-    display: flex;
-    flex-direction: column;
+.form-div{
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
 }
 
 .labels{
     display: flex;
     flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 50px;
+}
+
+.book{
+    background-color: var(--grayish);
+    padding: 10px;
 }
