@@ -1,13 +1,18 @@
+// Refactored code that uses classes
+
 const addBtn = document.getElementById("add-new-btn")
 const container = document.querySelector(".container")
 
 const myLibrary = [];
 
-function Book(title, genre, author, read) {
+class Book {
+    // a constructor that initialises attributes
+    constructor(title, genre, author, read){
     this.title = title;
     this.genre = genre;
     this.author = author;
     this.read = read;
+    }
 };
 
 const dialogForm = `
